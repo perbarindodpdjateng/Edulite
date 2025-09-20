@@ -1,91 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Animasi Mobil Jalan</title>
-
-  <style>
-    /* Reset bodi agar tidak ada margin default */
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;      /* agar tidak ada scrollbar horizontal */
-      background: #87CEEB;   /* biru langit sebagai background */
-      height: 100vh;
-      position: relative;
-    }
-
-    /* Container jalan */
-    .road {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70px;
-      background: #333;
-    }
-
-    /* Garis jalan */
-    .road::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: repeating-linear-gradient(
-        90deg,
-        #fff 0px,
-        #fff 40px,
-        transparent 40px,
-        transparent 80px
-      );
-      transform: translateY(-50%);
-    }
-
-    /* Tulisan tengah */
-    .title {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.0rem;
-      font-weight: 300;
-      color: #fff;
-      text-shadow: 0 0 4px rgba(0,0,0,.25);
-      letter-spacing: 1px;
-      white-space: nowrap;
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    /* Gambar mobil */
-    .car {
-      position: absolute;
-      bottom: 5px;
-      left: -300px;
-      width: 280px;
-      animation: drive 6s linear infinite;
-    }
-
-    /* Animasi berjalan */
-    @keyframes drive {
-      to {
-        transform: translateX(calc(100vw + 300px));
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>Animasi Mobil Edulite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="img/car.png" as="image">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Tulisan di tengah layar -->
-  <div class="title">MOBIL EDULITE PERBARINDO JATENG</div>
-
-  <!-- Jalan -->
+  <h1 class="title">MOBIL EDULITE PERBARINDO JATENG</h1>
   <div class="road"></div>
+  <img class="car" src="img/car.png" width="280" height="120" alt="Mobil">
 
-  <!-- Mobil -->
-  <img class="car" src="https://64.media.tumblr.com/1a10d4df19e2920c8270e4b487ac07c0/55509dc088e3cbd2-c8/s640x960/7e5dcf4871606c848feff9c40178b7bb26de9e6f.pnj" alt="Mobil">
-
+  <script src="js/app.js" defer></script>
 </body>
 </html>
