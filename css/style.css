@@ -44,7 +44,7 @@ body{
 /* Mobil */
 .car{
   position:absolute;
-  bottom:5px;
+  bottom:15px;
   left:-300px;
   width:200px;
   animation:drive 6s linear infinite;
